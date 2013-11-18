@@ -4,7 +4,7 @@ pygments: true
 timezone: Asia/Chongqing
 
 destination: public
-exclude: ["CNAME", "public"]
+exclude: ["CNAME", "public", "README.md"]
 
 permalink: /:categories/:title
 

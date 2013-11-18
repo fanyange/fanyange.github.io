@@ -1,0 +1,73 @@
+---
+layout: default
+---
+{% assign id = page.id|encode_md5 %}
+<div>
+  <h1 class="entry-title">{{page.title}}</h1>
+  <div class="entry-meta">
+    <time class="updated" datetime="{{page.date|date_to_xmlschema}}" pubdate>
+      <a href="/archive#{{id}}">{{page.date|date: "%Y-%m-%d"}}</a>
+    </time>
+    <span class="author vcard">
+      by <span class="fn">{{site.author}}</span>
+    </span>
+  </div>
+  <div class="entry-content">
+    {{content}}
+  </div>
+
+  {% if page.tags[0] %}
+  <div class="entry-tags">
+    {% for tag in page.tags %}
+    <a href="/tag/#{{ tag }}">{{tag}}</a>
+    {% endfor %}
+  </div>
+  {% endif %}
+
+  {% if site.disqus %}
+  <div id="disqus_thread"></div>
+  <script type="text/javascript">
+  var disqus_shortname = '{{site.disqus}}';
+  var disqus_title = '{{page.title}}';
+  (function() {
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+  </script>
+  
+  {% elsif site.duoshuo %}
+  <div class="ds-thread" data-thread-key="{{ id }}" data-title="{{ page.title }}"></div>
+  <script type="text/javascript">
+  var duoshuoQuery = {short_name:"{{ site.duoshuo }}"};
+  (function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = 'http://static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0] 
+    || document.getElementsByTagName('body')[0]).appendChild(ds);
+  })();
+  </script>
+    
+  {% else %}
+  <script src="/static/js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+  <script>var duoshuoQuery = {short_name:"yizhi-fanyange"};</script>
+  <script src="http://static.duoshuo.com/embed.js"></script>
+  
+  <script type="text/javascript" charset="utf-8">
+  function toggleDuoshuoComments(container){
+    var el = document.createElement('div');//该div不需要设置class="ds-thread"
+    el.setAttribute('data-thread-key', '{{ id }}');//必选参数
+    el.setAttribute('data-url', '{{ page.url }}');//必选参数
+    DUOSHUO.EmbedThread(el);
+    $(container).append(el);
+    $('a#expand').remove();
+  }
+  </script>
+  <p style="text-align: center">
+    <a href="javascript:void(0);" onclick="toggleDuoshuoComments('#comment-box');" id="expand"><input type="button" value="展开评论" class='super normal button'></a>
+  </p>
+  <div id="comment-box" ></div>
+  {% endif %}
+</div>

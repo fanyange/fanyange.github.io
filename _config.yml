@@ -1,0 +1,37 @@
+name: 亦执
+markdown: kramdown
+pygments: true
+timezone: Asia/Chongqing
+
+destination: public
+exclude: ["CNAME", "public"]
+
+permalink: /:categories/:title
+
+url: http://blog.fanyange.com
+
+navigation:
+  - archive
+  - categories
+  - about
+
+elsewhere:
+  - name: Douban
+    link: http://www.douban.com/people/fanyange/
+  - name: Weibo
+    link: http://weibo.com/fanyange
+  - name: Motto
+    link: /motto.html
+
+# disqus: yizhi
+duoshuo: yizhi-fanyange
+
+
+author: Tom Mao
+
+engine:
+  name: Jekyll
+  link: http://jekyllrb.com/
+  author: 
+    name: Tom Preston-Werner
+    link: http://tom.preston-werner.com/

@@ -1,0 +1,1 @@
+This is my blog repository. Please visit <http://blog.fanyange.com> to see the site.

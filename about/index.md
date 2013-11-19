@@ -43,7 +43,7 @@ wiki](http://wiki.fanyange.com) 上，用
 如果你对我工作上的事情感兴趣，可以在[「材料」](/材料/)页面逛一逛。
 
 本站使用 [Jekyll](https://github.com/mojombo/jekyll‎)
-博客引擎搭建，有详尽且易读的 [文档](http://jekyllrb.com/docs/home/)。主题可耻地盗自 [moment](https://github.com/lepture/liquidluck-theme-moment)，感谢作者[Hsiaoming Yang](http://lepture.com/)。
+博客引擎搭建，有详尽且易读的 [文档](http://jekyllrb.com/docs/home/)。主题可耻地盗自博客引擎 [Felix Felicis](http://lab.lepture.com/liquidluck/) 的 [moment](https://github.com/lepture/liquidluck-theme-moment) theme，感谢作者[Hsiaoming Yang](http://lepture.com/)。
 
 [^1]: 所谓「党性，诚实，智商 三者只能居其二」的著名段子
 

@@ -21,7 +21,7 @@ category: 日知录
 
 这个不多说，看看这则短信往来截图就知道了。
 
-![]()
+![snapshot1.png](/static/images/snapshot1.png)
 
 先不多说了，目前我的态度不变，但情绪化的东西还是有，等过段时间再来检验吧。
 

@@ -1,1 +1,1 @@
-This is my blog repository. Please visit <http://blog.fanyange.com> to see the site.
+This is my blog repository. Please click link <http://blog.fanyange.com> to visit the site.

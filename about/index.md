@@ -45,6 +45,6 @@ wiki](http://wiki.fanyange.com) 上，用
 本站使用 [Jekyll](https://github.com/mojombo/jekyll‎)
 博客引擎搭建，有详尽且易读的 [文档](http://jekyllrb.com/docs/home/)。主题可耻地盗自博客引擎 [Felix Felicis](http://lab.lepture.com/liquidluck/) 的 [moment](https://github.com/lepture/liquidluck-theme-moment) theme，感谢作者[Hsiaoming Yang](http://lepture.com/)。
 
-[^1]: 所谓「党性，诚实，智商 三者只能居其二」的著名段子
+[^1]: 所谓「党性，诚实，智商 三者只能居其二」的著名段子。
 
 [^2]: 由此我知道，爱这个东西，无论彼时彼刻有多深，倘无经年累月的打磨、呵护和更新，一样会自然淡掉，甚至忘却，最后败给时间。

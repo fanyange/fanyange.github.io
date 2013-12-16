@@ -26,4 +26,4 @@ GTD 的问题：
 
 真放空和假极简的区别，GTD 和 任务奴隶的区别，我记住了吗？
 
-**Don't be just a rover! You can be adventurer!**
+**Don't be just a rover! You can be explorer!**

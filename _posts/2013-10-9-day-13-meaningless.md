@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 上班第十三天
-category: 日知录
+categories: daily
 ---
 
 

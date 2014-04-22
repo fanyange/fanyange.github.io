@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 湿货生活的幻化之旅
-categories: 忽然想
+categories: woolgather
 ---
 
 

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: GTD vs 极简目标
-categories: 闲思集
+categories: woolgather
 ---
 
 GTD 的问题：

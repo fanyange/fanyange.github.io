@@ -410,3 +410,7 @@ div.ds-meta {
 #disqus_thread {
     margin-top: 50px;
 }
+
+#principle:target {
+  background: rgba(100%, 100%, 0%, .3);
+}

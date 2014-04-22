@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 自动化
-categories: 闲思集
+categories: woolgather
 published: false
 ---
 

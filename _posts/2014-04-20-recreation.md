@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 创建新类
-categories: 闲思集
+categories: woolgather
 ---
 
 今天意外地重温了《史记》中的[《屈原贾生列传》](http://ctext.org/shiji/qu-yuan-jia-sheng-lie-zhuan)，读到此段，回味良久。

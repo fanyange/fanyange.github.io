@@ -9,6 +9,7 @@ CONFIG = {
   'theme_package_version' => "0.1.0"
 }
 
+desc "creat a new post or draft"
 task :post do
   abort("rake aborted: '#{CONFIG['posts']}' directory not found.") unless FileTest.directory?(CONFIG['posts'])
   title = ENV["title"] || "new-post"

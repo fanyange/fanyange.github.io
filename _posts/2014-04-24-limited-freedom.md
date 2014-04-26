@@ -1,6 +1,5 @@
 ---
 layout: post
-date: 2014-04-23
 title: 有限制的自由
 category: daily
 ---

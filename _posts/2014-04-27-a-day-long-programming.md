@@ -28,7 +28,6 @@ category: "daily"
 require 'open-uri'
 require 'mechanize'
 require 'json'
-require 'pry'
 
 # Log in
 # Initialize the agent
@@ -38,8 +37,8 @@ a.get 'http://www.douban.com'
 # find the login form
 f = a.page.forms.last
 # log in
-f.form_email = "mr.fanyange@gmail.com"
-f.form_password = "Muu3nkk8PLjZ"
+f.form_email = "EMAIL"
+f.form_password = "PASSWORD"
 # Input chaptcha solution
 if captcha_image = f.form_node.at_css('#captcha_image')
   captcha_image_url = captcha_image[:src]

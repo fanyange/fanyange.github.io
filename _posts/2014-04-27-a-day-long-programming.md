@@ -22,7 +22,75 @@ category: "daily"
 
 比如说菲波拉契数列：[1,2,3,5,8...]。你让计算机不停枚举，实质上是把自己的愚蠢转嫁给机器。但如果你直接把思考的结果，即 `F(N)=F(N-1)+F(N-2)` 交给他，则计算的体力活就由机器来代劳了。不少编程语言（如 Haskell）就是这样设计的。再比如快速排序，一图胜千言：
 
-![qsort](http://learnyouahaskell-zh-tw.csie.org/img/quicksort.png)
+<!-- ![qsort](http://learnyouahaskell-zh-tw.csie.org/img/quicksort.png) -->
+
+{% highlight ruby %}
+require 'open-uri'
+require 'mechanize'
+require 'json'
+require 'pry'
+
+# Log in
+# Initialize the agent
+a = Mechanize.new { |a| a.user_agent_alias = "Mac Safari"}
+# visit the site
+a.get 'http://www.douban.com'
+# find the login form
+f = a.page.forms.last
+# log in
+f.form_email = "mr.fanyange@gmail.com"
+f.form_password = "Muu3nkk8PLjZ"
+# Input chaptcha solution
+if captcha_image = f.form_node.at_css('#captcha_image')
+  captcha_image_url = captcha_image[:src]
+  `open #{captcha_image_url}`
+  `osascript -e 'activate application "iTerm"'`
+  print "输入验证码："; f['captcha-solution'] = gets.chomp
+end
+f.submit
+# set the Stat Class
+class Stat
+  attr_reader :user_activities
+  def initialize
+    @user_activities = Hash.new(0)
+  end
+
+  def parse(agent, end_pnum=10)
+    # (1..end_pnum).each { |i| parse_page(agent, "/?p=#{i}") }
+    ts = []
+    (1..end_pnum).each do |i|
+      ts << Thread.new { parse_page(agent, "/?p=#{i}") }
+    end
+    ts.each(&:join)
+  end
+
+  def to_s
+    @user_activities.sort_by { |k,v| -v }.map do |user, acts|
+      "#{user}: #{acts}"
+    end
+  end
+
+  def to_json
+    JSON.dump(to_s)
+  end
+
+  private
+  def parse_page(agent, page)
+    agent.get page 
+    users = agent.page.search('.lnk-people')
+    users.inject(@user_activities) do |h, u|
+      h[u.text] += 1
+      h
+    end
+  end
+end
+
+sta = Stat.new
+sta.parse(a,100)
+puts sta.to_s.first(10)
+File.open('douban_activities.json', 'w') { |f| f.write sta.to_json }
+# binding.pry
+{% endhighlight %}
 
 对于编程，我的看法是这样的：因为一项技术的实现可以大大简化的枯燥劳动，所以能给人以更大的空间去思考纯粹的问题，从而能让自己和他人的生活更加美好。这条「贼船」自己不经意间已经开始走远，就算是山高路远坑深，没有彭大将军，我也喜欢这样一直孤独地走下去，毕竟，这是我们年轻人可以选择的各种行业中，为数不多的能发挥自己创造力和灵感的了。
 

@@ -1,12 +1,12 @@
 name: 亦执
 markdown: kramdown
-pygments: true
+hilighter: "rouge"
 timezone: Asia/Chongqing
 
 destination: public
 exclude: ["CNAME", "public", "README.md"]
 
-permalink: /:categories/:title
+permalink: /:categories/:title/
 
 url: http://blog.fanyange.com
 

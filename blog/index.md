@@ -10,11 +10,12 @@ title: Categories
 {% when 'woolgather' %}
 <h2 class="entry-item-title" id="woolgather">忽然想</h2>
 {% endcase %}
+<div class="items">
 {% for post in category[1] %}
 <div class="entry-item">
   <time class="updated" datetime="{{site.time|date_to_xmlschema}}">{{post.date|date: "%Y-%m-%d"}}</time>
   <a href="{{ post.url }}">{{post.title}}</a>
 </div>
 {% endfor %}
+</div>
 {% endfor %}
-

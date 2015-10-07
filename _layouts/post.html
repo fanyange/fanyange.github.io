@@ -6,7 +6,7 @@ layout: default
   <h1 class="entry-title">{{page.title}}</h1>
   <div class="entry-meta">
     <time class="updated" datetime="{{page.date|date_to_xmlschema}}" pubdate>
-      <a href="/archive#{{id}}">{{page.date|date: "%Y-%m-%d"}}</a>
+      <a href="/blog#{{id}}">{{page.date|date: "%Y-%m-%d"}}</a>
     </time>
     <span class="author vcard">
       by <span class="fn">{{site.author}}</span>
@@ -51,7 +51,6 @@ layout: default
   </script>
     
   {% else %}
-  <script src="/static/js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
   <script>var duoshuoQuery = {short_name:"yizhi-fanyange"};</script>
   <script src="http://static.duoshuo.com/embed.js"></script>
   

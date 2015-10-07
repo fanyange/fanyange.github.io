@@ -1,18 +1,20 @@
 name: 亦执
 markdown: kramdown
+kramdown:
+  input: GFM
 hilighter: "rouge"
 timezone: Asia/Chongqing
 
 destination: public
 exclude: ["CNAME", "public", "README.md"]
 
-permalink: /:categories/:title/
+permalink: /blog/:categories/:title/
 
 url: http://blog.fanyange.com
 
 navigation:
-  - archive
-  - categories
+  - blog
+  - wiki
   - about
 
 elsewhere:
@@ -35,3 +37,11 @@ engine:
   author: 
     name: Tom Preston-Werner
     link: http://tom.preston-werner.com/
+
+defaults:
+  -
+    scope:
+      path: "wiki" # an empty string here means all files in the project
+      type: "pages"
+    values:
+      layout: "wiki"

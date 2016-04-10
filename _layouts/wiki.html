@@ -14,7 +14,7 @@ layout: default
   </span>
 </div>
 <script>
-$(docuemnt).ready( function() {
+$(document).ready( function() {
   $('li').each(function() { $(this).html($(this).html().replace(/\[\[(.+)\]\]/,'<a href="$1">$1</a>')) });
 });
 </script>

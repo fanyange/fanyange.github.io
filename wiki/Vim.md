@@ -400,8 +400,31 @@ http://tbaggery.com/2011/08/08/effortless-ctags-with-git.html
 
 scanf: `%f`, `%l`, `%m:`
 
-:compiler`
+`:compiler`
 
+## Autocompletion
+`<C-p>` and `<C-n>`; `<UP>` and `<Down>`
+
+Details:
+
+- `<C-x><C-n>`(this buffer)
+- `<C-x><C-i>`(including file)
+- `<C-x><C-l>`(whole line)
+- `<C-x><C-f>`(filename)
+- `<C-x><C-O>`(全能)
+
+`<C-y>`(ensure), `<C-e>`(cancel)
+
+## Spell
+`:set spell`
+`[s`,  `]s`
+
+`z=`
+`zg` and `zw`, or `zug`
+
+`:set spelllang`(current buffer)
+
+`<C-x><C-s>` or `<C-x>s`
 
 
 ---------------------------------

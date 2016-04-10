@@ -13,3 +13,8 @@ layout: default
   </time>
   </span>
 </div>
+<script>
+$(docuemnt).ready( function() {
+  $('li').each(function() { $(this).html($(this).html().replace(/\[\[(.+)\]\]/,'<a href="$1">$1</a>')) });
+});
+</script>

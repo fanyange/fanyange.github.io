@@ -3,6 +3,9 @@ title: My knowledge base
 ---
 ## Programming
 
+- [[Command Line]]
+- [[Python]]
+
 ### Web Development
 
 - [[Ruby on Rails]]

@@ -71,3 +71,5 @@ Design and Function
 - Fuction: A Dribbble client
 - Architecture: waterfall
 - Interaction: Straight but beautiful
+
+## Design Lolita

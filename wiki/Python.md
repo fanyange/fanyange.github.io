@@ -135,3 +135,42 @@ FP: `map(func, seq)`, `filter(func, seq)`, `reduce()`
 `isalnum`
 
 `apply(func[, args[, kwargs]])`
+
+## Class
+新式类:
+```python
+__metaclass__ = type
+class Person:
+  ...
+```
+
+`foo.greet()` -> `Person.greet(foo)`
+
+private methods:
+- `__method(self)` -> `_ClassName__method(self)`
+- or use `_method(self)`
+
+`issubclass`, `isinstance`
+
+member:
+
+- `ClassName.__bases__`
+- `object.__class__` or `type(s)`(New)
+
+interface:
+- `hasattr(obj, attr)`
+- `getattr(obj, 'method', missingreturn)`
+- `setattr(obj, 'method', value)`
+
+get all values(properties): `obj.__dict__`
+
+get information: `import inspect`
+
+## Error handling
+引发异常： `raise Exception(msg)`
+
+异常类： `dir(exceptions)`
+
+捕捉多个异常： `except (Exception1, Exception2, ...), e:`(or `as e`)
+
+`else`, `finally`

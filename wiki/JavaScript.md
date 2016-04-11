@@ -50,6 +50,10 @@ switch (expression) {
 
 没有重载
 
+
+# Variable and scope
+只能为引用对象添加属性(因为它才是「字典」)
+
 # Object
 an object is a hash.
 

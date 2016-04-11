@@ -171,6 +171,6 @@ get information: `import inspect`
 
 异常类： `dir(exceptions)`
 
-捕捉多个异常： `except (Exception1, Exception2, ...), e:`(or `as e`)
+捕捉多个异常： `except (Exception1, Exception2, ...), e:`(or `as e` in Python3)
 
 `else`, `finally`

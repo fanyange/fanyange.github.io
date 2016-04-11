@@ -4,17 +4,29 @@ title: Vim
 
 执行-重复-回退
 
+'.'范式: 一键移动，一键执行
+
+repeat examples:
+
+- `:normal` for normal command
+- `@:` for Ex command
+- `&` for substitute
+
 ## Normal Mode
 
-快速回到刚才位置：<C-O>
-
-`<C-a> and <C-x>`
+算数运算： `<C-a> and <C-x>`
 
 `set nrformats=`
 
 operator + motion
 
 operator: `c`, `d`, `y`, `g~`, `gu`, `gU`, `<`, `=`, `!`
+
+operate on a line: `gUU`
+
+Operator-Pending mode
+
+快速回到刚才位置：<C-O>
 
 `:h map-operator`
 

@@ -174,3 +174,12 @@ get information: `import inspect`
 捕捉多个异常： `except (Exception1, Exception2, ...), e:`(or `as e` in Python3)
 
 `else`, `finally`
+
+# Magic methods
+`super(SubClass, self).__init__()`
+
+protocol:
+
+sequence and map: `__len__(self)`, `__getitem__(self,key)`, `__setitem(self,key,val)`, `__del__(self)`
+
+

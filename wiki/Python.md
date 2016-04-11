@@ -179,7 +179,11 @@ get information: `import inspect`
 `super(SubClass, self).__init__()`
 
 protocol:
-
 sequence and map: `__len__(self)`, `__getitem__(self,key)`, `__setitem(self,key,val)`, `__del__(self)`
 
 
+property(fget, fset, fdel, doc)
+
+iterator and iterable: `next()` and `__iter__`, `iter(obj)`
+
+generator: `yield` and `send()`, `throw()`, `close()`

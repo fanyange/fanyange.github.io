@@ -189,3 +189,25 @@ sequence and map: `__len__(self)`, `__getitem__(self,key)`, `__setitem(self,key,
 iterator and iterable: `next()` and `__iter__`, `iter(obj)`
 
 generator: `yield` and `send()`, `throw()`, `close()`
+
+## Modules
+`sys.path.append(os.path.expanduser('~/python'))`
+
+`reload`(deleted in Python3)
+
+`export PYTHONPATH=$PYTHONPATH:~/hello`
+
+`sys.prefix` and `.pth` file
+
+package:
+```python
+# pkg/__init__.py
+# pgk/mod.py
+import pkg
+import pkg.mod
+```
+
+grok:
+- `dir(mod)`
+- `__all__`
+- source file: `__file__`

@@ -1,7 +1,7 @@
 ---
 title: Python
 ---
-[[Modules]]
+- [[Modules]]
 
 ## Numbers and Expressions
 浮点数除法

@@ -4,7 +4,7 @@ module Jekyll
       alias old_convert convert
 
       def convert(content)
-        content.gsub!(/\[\[(.+?)\]\]/, '[\1](\1)')
+        content.gsub!(/\[\[(.+?)\]\]/, '[\1](/wiki/\1)')
         old_convert(content)
       end
     end

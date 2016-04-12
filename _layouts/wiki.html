@@ -15,6 +15,6 @@ layout: default
 </div>
 <script>
 $(document).ready( function() {
-  $('li').each(function() { $(this).html($(this).html().replace(/\[\[(.+)\]\]/,'<a href="$1">$1</a>')) });
+  $('li').each(function() { $(this).html($(this).html().replace(/\[\[(.+)\]\]/,'<a href="/wiki/$1">$1</a>')) });
 });
 </script>

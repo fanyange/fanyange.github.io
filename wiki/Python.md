@@ -161,6 +161,7 @@ member:
 - `object.__class__` or `type(s)`(New)
 
 interface:
+
 - `hasattr(obj, attr)`
 - `getattr(obj, 'method', missingreturn)`
 - `setattr(obj, 'method', value)`
@@ -182,6 +183,7 @@ get information: `import inspect`
 `super(SubClass, self).__init__()`
 
 protocol:
+
 sequence and map: `__len__(self)`, `__getitem__(self,key)`, `__setitem(self,key,val)`, `__del__(self)`
 
 
@@ -209,6 +211,7 @@ import pkg.mod
 ```
 
 grok:
+
 - `dir(mod)`
 - `__all__`
 - source file: `__file__`
@@ -249,6 +252,7 @@ grok:
   - `heapreplace(heap, new_value)`
   - `nlargest(n, iter)`
   - `nsmallest(n, iter)`
+
 dque
  - `appendleft`
  - `popleft`

@@ -212,3 +212,75 @@ grok:
 - `dir(mod)`
 - `__all__`
 - source file: `__file__`
+
+### sys
+- `argv`
+- `exit`
+- `modules`
+- `path`
+- `platform`
+- `stdin`
+- `stdout`
+- `stderr`
+
+### os
+- `environ`
+- `system`
+- `sep` -> /
+- `pathsep` -> :
+- `linesep` -> \n
+- `urandom`
+
+### fileinput
+- `input(inplace=True)`
+- `lineno`
+- `filelineno`
+- `isfirstline`
+- `isstdin`
+- `nextfile`
+- `close`
+
+### collections
+`set`
+`heapq`
+  - `heappush(heap, x)`
+  - `heappop`
+  - `heapify(seq)`
+  - `heapreplace(heap, new_value)`
+  - `nlargest(n, iter)`
+  - `nsmallest(n, iter)`
+dque
+ - `appendleft`
+ - `popleft`
+ - `rotate`
+`Counter`
+`defaultdict`
+
+### time
+- `asctime`
+- `localtime`
+- `mktime`
+- `strptime`
+- `strftime`
+- `time`
+
+- ### random
+- `random`
+- `randinit`
+- `randrange`
+- `uniform`
+- `choice`
+- `sample`
+
+- ### re
+- `compile`
+- `search`
+- `match`
+- `findall`
+- `split`
+- `sub`
+- `MatchObject`:
+   - `group(group)`
+   - `start(group)`
+   - `end(group)`
+   - `span(group)`

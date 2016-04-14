@@ -108,6 +108,7 @@ methods:
 - `copy` and `deepcopy(d)`
 - `dict.fromkeys(['key1','key2'], val)`
 - `get(key, return)` and `setdefualt(key, val)`
+  - `import defaultdict`
 - `has_key`
 - `items` and `iteritems`
 - `keys` and `iterkeys`

@@ -264,7 +264,7 @@ dque
 - `strftime`
 - `time`
 
-- ### random
+### random
 - `random`
 - `randinit`
 - `randrange`
@@ -272,7 +272,7 @@ dque
 - `choice`
 - `sample`
 
-- ### re
+### re
 - `compile`
 - `search`
 - `match`

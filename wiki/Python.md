@@ -335,4 +335,17 @@ mode:
 wxpython
 
 ## Database
-- `connect`
+connection:
+
+`connect(dsn, user, password, host, database)`
+
+- `close`
+- `commit`
+- `rollback`
+- `cursor`
+
+cursor:
+
+- `execute`
+- `description`
+- `fetchall`

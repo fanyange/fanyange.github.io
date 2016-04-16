@@ -2,6 +2,8 @@
 title: Python
 ---
 - [[Modules]]
+- Implemetations
+  - PyPy
 
 ## Numbers and Expressions
 浮点数除法
@@ -288,3 +290,49 @@ dque
    - `start(group)`
    - `end(group)`
    - `span(group)`
+
+`excecfile`
+
+### others
+- ConfigParser
+- Logger
+- functools
+- difflib
+- hashlib
+- csv
+- timeit, profile, trace
+- datetime
+- itertools
+- logging
+- getopt, optparse
+- cmd
+
+template: `Template`
+## IO
+`oepn(name[, mode[, buffering]])` -> `file`
+
+mode:
+- r
+- w
+- a
+- +
+- b
+
+`os.linesep`
+
+类文件对象: `read`, `readline`, `readlines`
+
+- `sys.stdin`
+- `sys.stdout`
+- `sys.stderr`
+
+随机访问：`seek`, `tell`
+
+- `read`, `readline`, `readlines`
+- `write`, `writelines(iter)`
+
+## GUI
+wxpython
+
+## Database
+- `connect`

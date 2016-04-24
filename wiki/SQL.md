@@ -1,12 +1,38 @@
 ---
 title: SQL
 ---
+- DDL(Data Definition Language)
+- DML(Data Manipulation Language)
+- DCL(Data Control Language)
+
+`SELECT 'hello world!' FROM Users`
+
+- `CREATE TABLE <tablename> (columndef)`
+- `DROP TABLE <tablename>`
+
+- `ALTER TABLE <tablename> ADD COLUMN <columndef>`
+- `ALTER TABLE <tablename> DROP COLUMN <columndef>`
+
+- `ALTER TABLE <tablename> RENAME TO <tablename>`
+
+```SQL
+BEGIN TRANSACTION;
+.....
+COMMIT;
+```
+
+schema: `\d tablename`
+
 ## data types
-char
-varchar
-integer
-date
-boolean
+- char
+- varchar(varchar2)
+- integer
+- date
+- boolean
+
+## constraint
+primary key
+not null
 
 ## aggregate
 count

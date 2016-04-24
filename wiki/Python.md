@@ -3,6 +3,7 @@ title: Python
 ---
 - [[Modules]]
 - Implemetations
+- Web Scraping
   - PyPy
 
 ## Numbers and Expressions
@@ -299,10 +300,13 @@ dque
 - functools
 - difflib
 - hashlib
-- csv
+- [x] csv
+  - 处理标题行: `csv.DictReader`
+  - 处理空值
 - timeit, profile, trace
 - datetime
 - itertools
+  - `chain`(`.from_iterable`)
 - logging
 - getopt, optparse
 - cmd
@@ -346,6 +350,73 @@ connection:
 
 cursor:
 
-- `execute`
+- `execute` (处理空值不太方便)
 - `description`
 - `fetchall`
+
+## Web
+tidy
+
+- Popen
+- PIPE
+
+xpath
+
+HTMLParser
+
+BeautifulSoup
+
+### CGI(Common Gateway Interface)
+`../cgi-bin/..`
+`.cgi`
+`cgitb`
+
+## Test
+- requirements introduction
+- coverage(trace.py)
+
+`doctest.testmod(modname)`
+
+`unittest`
+
+- `unittest.main()`
+
+`nose`
+
+- `failUnless`
+- `failIf`
+- `failUnlessEqual`
+- `failIfEqual`
+
+`pylint -rn modname`
+
+### Profiling
+`profile.run('function()')`
+
+`pstats.Stats('profile.profile')`
+
+`timeit`
+
+## Package
+```python
+# -*- coding: utf-8 -*-
+import sys
+from distutils.core import setup
+
+setup(name='Hello',
+        version='1.0',
+        description='A simple example',
+        author='Magnus Lie Hetland',
+        py_modules=['hello'])
+```
+`distutils` and `setuptools`(eggs)
+
+    python setup.py install
+    python setup.py bdist --help-formats
+    python setup.py sdist --formats=zip
+    python setup.py build_ext --inplace
+
+## Happy
+- prototyping
+- configuring
+- logging

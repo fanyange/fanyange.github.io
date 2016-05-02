@@ -31,6 +31,11 @@ status:
 
 `res.headers.get('content-type')`
 
+http basic authentication
+
+    auth = HTTPBasicAuth('username', 'password')
+    rq.post(url, auth=auth)
+
 ## Advanced
 
 ### session

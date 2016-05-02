@@ -3,8 +3,8 @@ title: Python
 ---
 - [[Modules]]
 - Implemetations
-- Web Scraping
   - PyPy
+- [[Web Scraping]]
 
 ## Numbers and Expressions
 浮点数除法
@@ -295,6 +295,11 @@ dque
 `excecfile`
 
 ### others
+- string
+  - .ascii_letters
+  - .punctuation
+- collections
+  - OderedDict
 - ConfigParser
 - Logger
 - functools
@@ -314,6 +319,8 @@ dque
 template: `Template`
 ## IO
 `oepn(name[, mode[, buffering]])` -> `file`
+
+`StringIO`, `BytesIO`
 
 mode:
 - r

@@ -196,6 +196,13 @@ iterator and iterable: `next()` and `__iter__`, `iter(obj)`
 
 generator: `yield` and `send()`, `throw()`, `close()`
 
+You can only iterate over generator once.
+
+### decorator
+    from functools import wrap
+    @wrap(func)
+
+
 ## Modules
 `sys.path.append(os.path.expanduser('~/python'))`
 
@@ -204,6 +211,7 @@ generator: `yield` and `send()`, `throw()`, `close()`
 `export PYTHONPATH=$PYTHONPATH:~/hello`
 
 `sys.prefix` and `.pth` file
+
 
 package:
 ```python
@@ -294,7 +302,18 @@ dque
 
 `excecfile`
 
-### others
+### standard library
+- argparse
+
+    parser = argparse.ArgumentParse()
+    parser.add_argument('--number', required=True, type=int, help='number to perform calculation')
+    params = parser.parse_args()
+    number = params.number
+
+- http.cookiejar.CookieJar()
+- urllib.requests.HTTPCookieProcessor(cookie)
+- urllib.requests.build_opener(handler)
+
 - string
   - .ascii_letters
   - .punctuation
@@ -365,6 +384,10 @@ cursor:
 tidy
 
 - Popen
+    p = Popen([args], stdin=PIPE, stdout=PIPE, stderr=PIPE)
+    p.wait()
+    p.stdin.write('cmd')
+    p.stdout.read()
 - PIPE
 
 xpath

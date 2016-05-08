@@ -17,3 +17,6 @@ Obj: `BeautifulSoup`, `Tag`, `NavigatableString`, `Comment`
 - `children`, `descendants`, `next_siblings`, `parent`
 - `attrs`
 - `find(src=True)`
+- `prettyfi`
+- `string` and `text`; `strings` and `stripped_strings`
+- `select`

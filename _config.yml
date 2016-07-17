@@ -1,11 +1,11 @@
 name: 亦执
 markdown: kramdown
-kramdown:
-  input: GFM
+# kramdown:
+#   input: kramdown
 hilighter: "rouge"
 timezone: Asia/Chongqing
 
-destination: public
+# destination: public
 exclude: ["CNAME", "public", "README.md"]
 
 permalink: /blog/:categories/:title/
@@ -23,7 +23,7 @@ elsewhere:
   - name: Weibo
     link: http://weibo.com/fanyange
   - name: Motto
-    link: /motto.html
+    link: /motto
 
 # disqus: yizhi
 duoshuo: yizhi-fanyange

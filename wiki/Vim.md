@@ -2,9 +2,12 @@
 title: Vim
 ---
 
+- Plugins
+  - [[Emmet]]
+
 执行-重复-回退
 
-'.'范式: 一键移动，一键执行
+`.`范式: 一键移动，一键执行
 
 repeat examples:
 

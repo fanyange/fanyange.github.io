@@ -1,13 +1,31 @@
 ---
 title: Python
 ---
+- [[Standard Library]]
 - [[Modules]]
 - Implemetations
   - PyPy
 - [[Web Scraping]]
+- [[IPython]]
 
 ## Numbers and Expressions
 浮点数除法
+
+`1e8` is also a float
+
+`int('11.1')` will raise an `ValueError`
+
+```python
+from decimal import Decimal
+a = Decimal('1.345')
+b = Decimal('0.01')
+a.quantize(b)
+```
+
+```python
+from fractions import Fraction
+fractions.gcd(24, 16) #=> 8
+```
 
 `from __future__ import division`
 
@@ -34,6 +52,10 @@ title: Python
 `r'hello\n' '\\'`
 
 ## List and tuple
+`list` 更像链表而非数组
+
+`array(typecode, initializer)`
+
 Container:
 
 - Sequence
@@ -48,6 +70,7 @@ Sequence methods:
 - index
 - slice
   - `tags[9:30]`, `numbers[::-4]`
+  - 小于起始位置的偏移量会被当做0，大于终止位置的偏移量会被当做-1
 - add or multiply
   - `[None] * 10`
 - member
@@ -64,6 +87,31 @@ List methods:
 - copy a list: `list[:]`
 - compare: `cmp`, `key=len`, `reverse=True`
 
+In Python the default arguments are evaluated once when the function is defined, not each time the function is called.
+
+    def add_to(num, target=[]):
+        target.append(num)
+        return target
+
+    add_to(1)
+    # Output: [1]
+
+    add_to(2)
+    # Output: [1, 2]
+
+    add_to(3)
+    # Output: [1, 2, 3]
+    
+change to this:
+
+    def add_to(element, target=None):
+        if target is None:
+            target = []
+        target.append(element)
+        return target
+
+`enumerate(list, n)`
+
 Tuple
 `1,2,3` => `(1,2,3)`
 
@@ -72,6 +120,20 @@ Tuple
 `tuple(sequence)`
 
 ## String
+
+```python
+str.find('string')
+str.rfind('string')
+str.count('string')
+str.isdigit('123')
+```
+
+```python
+str.center(30)
+str.ljust(30)
+str.rjust(30)
+```
+
 formatting:
 
 `"hello %.4f %s" % (1, 'world')`
@@ -133,7 +195,16 @@ scope: `vars()`
 
 `locals()`, `globals()`
 
-`global x`
+`global x`: you can access `x` out of current function scope. (在函数外定义的变量本来就可以被函数内访问到)
+
+Don't write this: `a = 1; def addA(): a += 1`
+
+    a = 1
+    def change_a():
+        global a
+        a += 100
+    
+    print(a) # => 101
 
 unpacking: `*params` & `**kwds`
 
@@ -143,6 +214,9 @@ FP: `map(func, seq)`, `filter(func, seq)`, `reduce()`
 `apply(func[, args[, kwargs]])`
 
 ## Class
+
+Python is strong typed
+
 新式类:
 ```python
 __metaclass__ = type
@@ -223,7 +297,11 @@ import pkg.mod
 
 grok:
 
-- `dir(mod)`
+- introspection:
+  - `dir(mod)`
+  - `dir()`
+  - `id(obj)`
+  - `inspect.getmembers(obj)`
 - `__all__`
 - source file: `__file__`
 
@@ -255,21 +333,31 @@ grok:
 - `close`
 
 ### collections
-`set`
-`heapq`
-  - `heappush(heap, x)`
-  - `heappop`
-  - `heapify(seq)`
-  - `heapreplace(heap, new_value)`
-  - `nlargest(n, iter)`
-  - `nsmallest(n, iter)`
+set
 
-dque
+defaultdict
+- `tree = lambda: defaultdict(tree)`
+
+namedtuple
+- `namedtuple('Animal', 'name age type')`
+- `._asdict()`
+
+enum.Enum
+
+heapq
+- `heappush(heap, x)`
+- `heappop`
+- `heapify(seq)`
+- `heapreplace(heap, new_value)`
+- `nlargest(n, iter)`
+- `nsmallest(n, iter)`
+
+deque
+- `deque(maxlen=30)`
  - `appendleft`
  - `popleft`
  - `rotate`
 `Counter`
-`defaultdict`
 
 ### time
 - `asctime`
@@ -303,6 +391,8 @@ dque
 `excecfile`
 
 ### standard library
+- http.server
+- json.tool
 - argparse
 
     parser = argparse.ArgumentParse()
@@ -340,6 +430,8 @@ template: `Template`
 `oepn(name[, mode[, buffering]])` -> `file`
 
 `StringIO`, `BytesIO`
+
+`io.open('filename', 'mode', encoding='utf8')`
 
 mode:
 - r

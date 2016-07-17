@@ -1,6 +1,14 @@
 ---
 title: JavaScript
 ---
+
+A callback is a function that is passed as an argument to another function and is executed after its parent function has completed. 
+
+# Libraries
+- [[jQuery]]
+- Vue.js
+- D3.js
+
 JS 实现: ECMAScript + DOM + BOM
 
 # APIs

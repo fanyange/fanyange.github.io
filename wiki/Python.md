@@ -347,7 +347,7 @@ grok:
 - `close`
 
 ### collections
-`set`(just like a `dict` without values)
+set(just like a dict without values)
 
 - `{}` or `set()`
 - `&`, `|`, `-`, `^`

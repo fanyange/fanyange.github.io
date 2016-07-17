@@ -83,9 +83,17 @@ List methods:
 - change an element
 - `del` an element
 - assign(slicing)
-- `append`, `count`, `extend(+ or slice)`, `index(indexNum or ValueError)`, `insert`, `pop`, `remove`(only once), `reverse`(reversed), `sort(cmp)`(sorted)
-- copy a list: `list[:]`
+- `append`, `count`, `extend(+ or slice)`, `index(indexNum or ValueError)`, `insert`, `pop([offset])`, `remove`(only once), `reverse`(or `reversed()`), `sort(cmp)`(or `sorted()`)
+- copy a list:
+  - `list[:]`
+  - `copy()`
+  - `list()`
 - compare: `cmp`, `key=len`, `reverse=True`
+
+- append + pop(-1) ~ stack
+- append + pop(0) ~ queue
+
+`in` statement is better used in `set`.
 
 In Python the default arguments are evaluated once when the function is defined, not each time the function is called.
 
@@ -165,7 +173,13 @@ mapping -> dict
 
 `dict(seq)`, `dict([(key, val)])`, `dict(key=val)`
 
+```python
+dict(['ab', 'cd', 'ef']) #=> {'a': 'b', 'c': 'd', 'e': 'f'}
+```
+
 formatting: `"%(key)s"`
+
+a key `in` a dict
 
 methods:
 
@@ -176,8 +190,8 @@ methods:
   - `import defaultdict`
 - `has_key`
 - `items` and `iteritems`
-- `keys` and `iterkeys`
-- `values` and `itemvalues`
+- `keys` and `iterkeys` => `dict_keys` in Python3, no `iterkeys`
+- `values` and `itemvalues` => `dict_values` in Python3, no `itervalues`
 - `pop(key)` and `popitem`
 - `update`
 
@@ -333,18 +347,25 @@ grok:
 - `close`
 
 ### collections
-set
+`set`(just like a `dict` without values)
+
+- `{}` or `set()`
+- `&`, `|`, `-`, `^`
+- `<=`, `<`
 
 defaultdict
+
 - `tree = lambda: defaultdict(tree)`
 
 namedtuple
+
 - `namedtuple('Animal', 'name age type')`
 - `._asdict()`
 
 enum.Enum
 
 heapq
+
 - `heappush(heap, x)`
 - `heappop`
 - `heapify(seq)`
@@ -353,6 +374,7 @@ heapq
 - `nsmallest(n, iter)`
 
 deque
+
 - `deque(maxlen=30)`
  - `appendleft`
  - `popleft`

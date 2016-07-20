@@ -502,6 +502,7 @@ deque
 - cmd
 
 template: `Template`
+
 ## IO
 `oepn(name[, mode[, buffering]])` -> `file`
 

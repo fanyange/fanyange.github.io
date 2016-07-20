@@ -8,6 +8,9 @@ title: Python
 - [[Web Scraping]]
 - [[IPython]]
 
+## PEP8
+80 chars a line. more chars should be written after a '\' char and a line break.
+
 ## Numbers and Expressions
 浮点数除法
 
@@ -195,8 +198,31 @@ methods:
 - `pop(key)` and `popitem`
 - `update`
 
+## code structure
+
+`while ... else ...`
+
+`zip(lista, listb, listc)`
+
+- ends after the shortest sequence has been iterated over.
+- example: `dict(zip(lista, listb))`
+
+list / dict / set / generator comprehension
+
 
 ## Function
+Keyword parameters / arguments
+
+You can directly use keyword arguments when calling a function. For example:
+```python
+def say(name, sex, age):
+    return name, sex, age
+
+say(sex='male', age =18, name='Mao')
+```
+
+`sum()`
+
 target: Abstarct
 
 `callable(func)`
@@ -223,7 +249,8 @@ Don't write this: `a = 1; def addA(): a += 1`
 unpacking: `*params` & `**kwds`
 
 FP: `map(func, seq)`, `filter(func, seq)`, `reduce()`
-`isalnum`
+
+`isalnum`, `isupper`
 
 `apply(func[, args[, kwargs]])`
 
@@ -262,6 +289,9 @@ get all values(properties): `obj.__dict__`
 get information: `import inspect`
 
 ## Error handling
+
+> Do, or do not. There is no try.
+
 引发异常： `raise Exception(msg)`
 
 异常类： `dir(exceptions)`

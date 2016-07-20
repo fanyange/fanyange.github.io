@@ -9,7 +9,7 @@ title: Python
 - [[IPython]]
 
 ## PEP8
-80 chars a line. more chars should be written after a '\' char and a line break.
+80 chars a line. more chars should be written after a '\\' char and a line break.
 
 ## Numbers and Expressions
 浮点数除法
@@ -86,7 +86,7 @@ List methods:
 - change an element
 - `del` an element
 - assign(slicing)
-- `append`, `count`, `extend(+ or slice)`, `index(indexNum or ValueError)`, `insert`, `pop([offset])`, `remove`(only once), `reverse`(or `reversed()`), `sort(cmp)`(or `sorted()`)
+- `append`, `count`, `extend(+ or slice)`, `index(indexNum or ValueError)`, `insert`, `pop([offset])`, `remove`(only once), `reverse`(or `reversed()` or `l[::-1]`), `sort(cmp)`(or `sorted()`)
 - copy a list:
   - `list[:]`
   - `copy()`
@@ -322,7 +322,11 @@ You can only iterate over generator once.
 
 
 ## Modules
+when to import a module in the begining of a file and when to do it in a function
+
 `sys.path.append(os.path.expanduser('~/python'))`
+
+'' in `sys.path`
 
 `reload`(deleted in Python3)
 
@@ -383,7 +387,7 @@ set(just like a dict without values)
 - `&`, `|`, `-`, `^`
 - `<=`, `<`
 
-defaultdict
+`defaultdict(func)`
 
 - `tree = lambda: defaultdict(tree)`
 
@@ -409,7 +413,11 @@ deque
  - `appendleft`
  - `popleft`
  - `rotate`
+
 `Counter`
+
+- `counter.most_common`
+- just like a set: `counter_a ( + / - / & / | ) counter_b`
 
 ### time
 - `asctime`
@@ -473,6 +481,22 @@ deque
 - datetime
 - itertools
   - `chain`(`.from_iterable`)
+  - `cycle`
+  - `accumulate([func])`
+  - `groupby(iterable, key=keyfunc)`
+
+    ```python
+    from itertools import groupby
+    from urllib.urlparse import urlsplit
+
+    def paths(url):
+        path = urlsplit(url).path.strip('/')
+        return path.split('/')[:-1]
+    
+    g = groupby(sorted(urls, key=paths), paths)
+    r = [(key, list(val)) for key, val in g]
+    ```
+
 - logging
 - getopt, optparse
 - cmd

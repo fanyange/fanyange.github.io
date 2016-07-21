@@ -304,6 +304,9 @@ get information: `import inspect`
 
 `@staticmethod`
 
+### namedtuple
+`._replace()`
+
 ## Magic methods
 `super(SubClass, self).__init__()`
 

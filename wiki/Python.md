@@ -300,8 +300,14 @@ get information: `import inspect`
 
 `else`, `finally`
 
+`@classmethod; def(cls)` and `cls.attr`
+
+`@staticmethod`
+
 ## Magic methods
 `super(SubClass, self).__init__()`
+
+`super().__init__(*args)`
 
 protocol:
 
@@ -319,7 +325,24 @@ You can only iterate over generator once.
 ### decorator
     from functools import wrap
     @wrap(func)
+    
+### frequently used methods:
 
+| Method Name        | Usage  |
+| :----------------- | :----- |
+| `__eq__`           | ==     |
+| `__ne__`           | !=     |
+| `__lt__`           | <      |
+| `__gt__`           | >      |
+| `__le__`           | <=     |
+| `__ge__`           | >=     |
+| `__add__`          | +      |
+| `__sub__`          | -      |
+| `__mul__`          | *      |
+| `__floordiv__`     | //     |
+| `__truediv__`      | /      |
+| `__mod__`          | %      |
+| `__pow__`          | **     |
 
 ## Modules
 when to import a module in the begining of a file and when to do it in a function

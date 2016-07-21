@@ -61,6 +61,7 @@ li ul {
 }
 
 table {
+    width: 100%;
     border-collapse: collapse;
     border-spacing: 0;
     border-color: #bbb;
@@ -68,8 +69,14 @@ table {
 table tr:nth-child(2n) {
     background: #eee;
 }
+
+table th {
+    background-color: #eee;
+}
+
 table th, table td {
 /*    text-align: left;*/
+    border: 1px solid #ddd;
     padding: 4px 6px;
 }
 /* span level */

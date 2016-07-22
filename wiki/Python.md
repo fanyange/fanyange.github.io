@@ -170,6 +170,31 @@ methods:
 - `strip('abc')`
 - `translate(table, to_del)`, `(maketrans(from, to))`
 
+### unicode
+<http://www.unicode.org/charts/>
+
+`\uffff`, `\Uffff`, `\N{name}`
+
+`unicodedata`: `name()` , `lookup()`
+
+### encode & decode
+
+- `encode('ascii', 'ignore')`
+- `encode('ascii', 'replace')`
+- `encode('ascii', 'backslashreplace')`
+
+### formatting
+
+old:
+
+`%%`
+
+`'%-10.4s'`
+
+new:
+
+增加填充字符(after `:`)、对齐字符(`>`, `<`, `^`): `'{0:!^20s}'.format('BIG SALE')`
+
 ## Dict
 sequence -> (list, tuple, string, ...)
 mapping -> dict

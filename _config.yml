@@ -1,6 +1,7 @@
 name: 亦执
 markdown: kramdown
-# kramdown:
+kramdown:
+  toc_levels: 2..3
 #   input: kramdown
 hilighter: "rouge"
 timezone: Asia/Chongqing

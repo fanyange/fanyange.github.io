@@ -241,6 +241,9 @@ hr.end {
     top: 0;
     right: 10px;
   }
+  ul#markdown-toc {
+    display: none;
+  }
 }
 #main {
   clear: both;

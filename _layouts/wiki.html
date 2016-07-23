@@ -17,4 +17,14 @@ layout: default
 $(document).ready( function() {
   $('li').each(function() { $(this).html($(this).html().replace(/\[\[(.+)\]\]/,'<a href="/wiki/$1">$1</a>')) });
 });
+
+var toc = $('ul#markdown-toc');
+var container = $('.container');
+$(window).resize(function() {
+  if (window.innerWidth * 0.066 + parseFloat(toc.css('width')) + 32 * 2 > parseFloat(container.css('margin-left'))) {
+    toc.fadeOut()
+  } else {
+    toc.fadeIn();
+  }
+})
 </script>

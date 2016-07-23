@@ -21,7 +21,7 @@ $(document).ready( function() {
 var toc = $('ul#markdown-toc');
 var container = $('.container');
 $(window).resize(function() {
-  if (window.innerWidth * 0.066 + parseFloat(toc.css('width')) + 32 * 2 > parseFloat(container.css('margin-left'))) {
+  if (window.innerWidth * 0.1 + parseFloat(toc.css('width')) + 32 * 2 > parseFloat(container.css('margin-left'))) {
     toc.fadeOut()
   } else {
     toc.fadeIn();

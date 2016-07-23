@@ -445,6 +445,7 @@ ul#markdown-toc {
   box-shadow: 0 0 5px #ccc;
   height: 76%;
   overflow: auto;
+  max-width: 170px;
 }
 
 ul#markdown-toc::before {

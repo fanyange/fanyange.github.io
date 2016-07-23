@@ -534,6 +534,33 @@ pattern:
 
 `excecfile`
 
+### PyYaml
+`safe_load()`
+
+```yaml
+e: !!str 123
+
+# 多行字符串可以使用|保留换行符，也可以使用>折叠换行。
+this: |
+  Foo
+  Bar
+that: >
+  Foo
+  Bar
+# JS: { this: 'Foo\nBar\n', that: 'Foo Bar\n' }
+
+# +表示保留文字块末尾的换行，-表示删除字符串末尾的换行。
+s1: |
+  Foo
+
+s2: |+
+  Foo
+
+s3: |-
+  Foo
+# JS: { s1: 'Foo\n', s2: 'Foo\n\n\n', s3: 'Foo' }
+```
+
 ### standard library
 - http.server
 - json.tool

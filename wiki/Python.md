@@ -200,6 +200,21 @@ new:
 
 增加填充字符(after `:`)、对齐字符(`>`, `<`, `^`): `'{0:!^20s}'.format('BIG SALE')`
 
+### bytes and bytearray
+
+```python
+blist = [1, 2, 3, 255]
+the_bytes = bytes(blist)
+the_bytes #-> b'\x01\x02\x03\xff'
+
+the_byte_array = bytearray(blist)
+the_byte_array #-> bytearray(b'\x01\x02\x03\xff')
+```
+
+#### struct
+
+`pack()` and `unpack('>LL', bytes)`
+
 ## Dict
 sequence -> (list, tuple, string, ...)
 mapping -> dict
@@ -508,13 +523,14 @@ deque
 
 pattern:
 
-| pattern         | match                      |
-| :---            | :------------              |
-| `prev{m}`       | m 个连续的 prev            |
-| `prev(?=next)`  | 如果后面为 next，返回 prev |
-| `prev(?!next)`  | 如果后面非 next，返回 prev |
-| `(?<=prev)next` | 如果前面为 prev，返回 next |
-| `(?<!prev)next` | 如果前面非 prev，返回 next |
+| pattern            | match                      |
+| :-----------       | :------------              |
+| `prev{m}`          | m 个连续的 prev            |
+| `prev(?=next)`     | 如果后面为 next，返回 prev |
+| `prev(?!next)`     | 如果后面非 next，返回 prev |
+| `(?<=prev)next`    | 如果前面为 prev，返回 next |
+| `(?<!prev)next`    | 如果前面非 prev，返回 next |
+| `(?P< name >expr)` | `m.group('name')`          |
 
 `excecfile`
 
@@ -582,8 +598,13 @@ mode:
 - r
 - w
 - a
+- **x**
 - +
 - b
+
+`print(str, file=io, sep='', end='')`
+
+`tell()` and `seek(offset, origin)`(origin: 0/1/2 or io.SEEK_SET/io.SEEK_CUR/io.SEEK_END)
 
 `os.linesep`
 

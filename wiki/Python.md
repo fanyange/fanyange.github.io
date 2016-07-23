@@ -1,6 +1,11 @@
 ---
 title: Python
 ---
+* TOC
+{:toc}
+
+### More Topics
+
 - [[Standard Library]]
 - [[Modules]]
 - Implemetations
@@ -223,7 +228,7 @@ methods:
 - `pop(key)` and `popitem`
 - `update`
 
-## code structure
+## Code structure
 
 `while ... else ...`
 
@@ -235,10 +240,11 @@ methods:
 list / dict / set / generator comprehension
 
 
-## Function
+## Functions
 Keyword parameters / arguments
 
 You can directly use keyword arguments when calling a function. For example:
+
 ```python
 def say(name, sex, age):
     return name, sex, age
@@ -493,11 +499,22 @@ deque
 - `findall`
 - `split`
 - `sub`
-- `MatchObject`:
-   - `group(group)`
-   - `start(group)`
-   - `end(group)`
-   - `span(group)`
+
+`MatchObject`:
+  - `group(group)`
+  - `start(group)`
+  - `end(group)`
+  - `span(group)`
+
+pattern:
+
+| pattern         | match                      |
+| :---            | :------------              |
+| `prev{m}`       | m 个连续的 prev            |
+| `prev(?=next)`  | 如果后面为 next，返回 prev |
+| `prev(?!next)`  | 如果后面非 next，返回 prev |
+| `(?<=prev)next` | 如果前面为 prev，返回 next |
+| `(?<!prev)next` | 如果前面非 prev，返回 next |
 
 `excecfile`
 
@@ -670,3 +687,5 @@ setup(name='Hello',
 - prototyping
 - configuring
 - logging
+
+

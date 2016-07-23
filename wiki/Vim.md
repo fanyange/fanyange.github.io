@@ -264,7 +264,7 @@ non-block: `iw` ...
 ## Jumps
 `<C-O>` and `<C-i>`
 
-### `:jumps`
+### `:jumps`(跳转列表)
 every window
 
 - `edit {newfile}` `<C-o>`
@@ -282,7 +282,7 @@ every window
 
 `<Tab>` is `<C-i>`
 
-### `:changes`
+### `:changes`(改变列表)
 every buffer
 `g;`, `g,`
 

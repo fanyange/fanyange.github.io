@@ -350,9 +350,6 @@ get information: `import inspect`
 
 `@staticmethod`
 
-### namedtuple
-`._replace()`
-
 ## Magic methods
 `super(SubClass, self).__init__()`
 
@@ -467,6 +464,9 @@ namedtuple
 
 - `namedtuple('Animal', 'name age type')`
 - `._asdict()`
+- `_make()`
+- `_replace()`
+
 
 enum.Enum
 
@@ -547,6 +547,7 @@ this: |
 that: >
   Foo
   Bar
+
 # JS: { this: 'Foo\nBar\n', that: 'Foo Bar\n' }
 
 # +表示保留文字块末尾的换行，-表示删除字符串末尾的换行。
@@ -558,6 +559,7 @@ s2: |+
 
 s3: |-
   Foo
+
 # JS: { s1: 'Foo\n', s2: 'Foo\n\n\n', s3: 'Foo' }
 ```
 
@@ -665,6 +667,26 @@ cursor:
 - `description`
 - `fetchall`
 
+### SQLite
+`sqlite3.connect(":memery:")`
+
+### SQLAlchemy
+
+3 levels:
+
+- DB-API
+  `connect` and `execute` -> `ResultProxy`
+- SQL generator
+  - `MetaData()`
+  - `Table(table, meta, *columns)`
+  - `table.insert(columns)`
+- ORM
+  - `declarative_base`
+  - `sessionmaker(bind=conn)`
+
+
+`dialect+driver://user:password@host:port/dbname`
+
 ## Web
 tidy
 
@@ -672,6 +694,9 @@ tidy
     p = Popen([args], stdin=PIPE, stdout=PIPE, stderr=PIPE)
     p.wait()
     p.stdin.write('cmd')
+
+:changes
+
     p.stdout.read()
 - PIPE
 

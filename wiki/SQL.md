@@ -33,6 +33,7 @@ schema: `\d tablename`
 ## constraint
 primary key
 not null
+serial (auto_increment)
 
 ## aggregate
 count

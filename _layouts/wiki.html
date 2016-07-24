@@ -16,15 +16,29 @@ layout: default
 <script>
 $(document).ready( function() {
   $('li').each(function() { $(this).html($(this).html().replace(/\[\[(.+)\]\]/,'<a href="/wiki/$1">$1</a>')) });
+
+  var toc = $('ul#markdown-toc');
+  var container = $('.container');
+  $(window).resize(function() {
+    if (window.innerWidth * 0.1 + parseFloat(toc.css('width')) + 32 * 2 > parseFloat(container.css('margin-left'))) {
+      toc.fadeOut()
+    } else {
+      toc.fadeIn();
+    }
+  })
+
+  var lis1 = $('#markdown-toc > li');
+  lis1.find('ul').hide();
+  lis1.each(function() {
+    $(this).click(function() {
+      $(this).find('ul').slideToggle();
+      $(this).find('ul').click(function() {
+        event.stopPropagation();
+      })
+    })
+  })
+
 });
 
-var toc = $('ul#markdown-toc');
-var container = $('.container');
-$(window).resize(function() {
-  if (window.innerWidth * 0.1 + parseFloat(toc.css('width')) + 32 * 2 > parseFloat(container.css('margin-left'))) {
-    toc.fadeOut()
-  } else {
-    toc.fadeIn();
-  }
-})
+
 </script>

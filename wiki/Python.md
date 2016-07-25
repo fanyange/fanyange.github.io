@@ -188,6 +188,8 @@ methods:
 - `encode('ascii', 'replace')`
 - `encode('ascii', 'backslashreplace')`
 
+use `chardet` library to detect the encoding of any bytes: `chardet.detect(bytes)`
+
 ### formatting
 
 old:
@@ -323,6 +325,7 @@ member:
 
 - `ClassName.__bases__`
 - `object.__class__` or `type(s)`(New)
+- `inspect.getmro(cls)` or `cls.mro()`
 
 interface:
 
@@ -688,6 +691,22 @@ cursor:
 `dialect+driver://user:password@host:port/dbname`
 
 ## Web
+status code:
+
+- 1xx(信息)
+- 2xx(成功)
+- 3xx(重定向)
+- 4xx(客户端错误)
+- 5xx(服务段错误)
+
+### urlopen
+
+response:
+
+- `status`
+- `getheader(s)`
+- 
+
 tidy
 
 - Popen

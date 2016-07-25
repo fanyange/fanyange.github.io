@@ -62,18 +62,26 @@ web 开发，获得我想要的数据，反而是当务之急。多读书，让�
 ### 2016-05-22
 龙应台曾经给他儿子一句话：“孩子，我要求你读书用功，不是因为我要你跟别人比成绩，而是因为，我希望你将来会拥有选择的权利，选择有意义、有时间的工作，而不是被迫谋生。当你的工作在你心中有意义，你就有成就感。当你的工作给你时间，不剥夺你的生活，你就有尊严。成就感和尊严，给你快乐。 ”
 
-**1st period**
+## Learning Path
 
-- Flask / Rails
-- HTML / CSS
+- Python
+  - syntax / SQL / Vim
+  - (cookbook / core application)
+  - Flask / ORM
+  - TDD
 - JavaScript
-- test driven development
-- SQL
-- Editor
+  - syntax
+  - jQuery
+  - Vue.js / React
+- CSS
+- Design
+- iOS(Swift)
+- C
+- Golang
+
 
 **2nd period**
 
-- Design
 - Photography
 - Drawing
 - Cook

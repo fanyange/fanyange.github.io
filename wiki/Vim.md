@@ -2,6 +2,9 @@
 title: Vim
 ---
 
+* TOC
+{:toc}
+
 - Plugins
   - [[Emmet]]
 

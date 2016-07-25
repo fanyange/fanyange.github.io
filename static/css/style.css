@@ -125,8 +125,8 @@ pre {
 }
 code, tt {
   background-color: #fee9cc;
-  color: rgba(0, 0, 0, 0.75);
-  padding: 1px 3px;
+  color: #888;
+  padding: 3px 5px;
   font-size: 12px;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;

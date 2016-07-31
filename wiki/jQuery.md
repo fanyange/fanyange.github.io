@@ -9,8 +9,8 @@ differences between:
 - core jQuery methods
   - jQuery namespace(utility method)
 
-## $.(document).ready()
-`$.(document).ready()` vs. `$(window).load()`
+## $(document).ready()
+`$(document).ready()` vs. `$(window).load()`
 
 ```js
 // Shorthand for $( document ).ready()

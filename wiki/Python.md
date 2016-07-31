@@ -436,6 +436,14 @@ grok:
 - `stderr`
 
 ### os
+- `path`
+  - `exists`
+  - `isfile`
+  - `isabs`
+  - `abspath`, `expanduser`, `realpath`
+- `shutil.copy`, `rename`,`remove`
+- `link`, `symlink`
+- `mkdir`, `rmdir`, `listdir`, `chdir`
 - `environ`
 - `system`
 - `sep` -> /
@@ -495,12 +503,38 @@ deque
 - just like a set: `counter_a ( + / - / & / | ) counter_b`
 
 ### time
-- `asctime`
-- `localtime`
-- `mktime`
+
+`calendar.isleap(year)`
+
+`time`
+
+- `asctime([t])`
+- `ctime([secs])`
+- `localtime([secs])` and `gmtime([secs])`
+- `mktime([t])`
 - `strptime`
 - `strftime`
+  - '%A %B', '%I:%M:%S%p'
 - `time`
+
+`datetime`
+
+- `date`
+  - `year`
+  - `month`
+  - `day`
+  - `isoformat`
+- `time`
+- `datetime`
+  - `date`
+  - `time`
+  - `combine(date, time)`
+- `timedelta`
+  - `timedelta(days=5)`
+
+`locale.locale_alias`
+
+`arrow.humanize()`
 
 ### random
 - `random`
@@ -586,7 +620,6 @@ s3: |-
 - collections
   - OderedDict
 - ConfigParser
-- Logger
 - functools
 - difflib
 - hashlib
@@ -614,6 +647,14 @@ s3: |-
     ```
 
 - logging
+  - priorities(`debug`, `info`, |  `warn`, `error`, `critical`)
+  - logger(`logging.getLogger('name')`)
+  - handler
+  - filter
+  ```python
+  logging.basicConfig(level=logging.DEBUG, file='FILENAME', format='%(asctime)s %(levelname)s %(lineno)s %(message)s')
+  ```
+
 - getopt, optparse
 - cmd
 
@@ -650,6 +691,27 @@ mode:
 
 - `read`, `readline`, `readlines`
 - `write`, `writelines(iter)`
+
+## System
+
+`subprocess`
+
+- `getoutput(cmd)`
+- `check_output(cmd)`
+- `getstatusoutput(cmd)` #=> return (0, 'output')
+- `call`
+  - `subprocess.call('date -u', shell=True)`
+  - `subprocess.call(['date', '-u'])`
+
+```python
+p1 = subprocess.Popen(args, stdout=subprocess.PIPE)
+p2 = subprocess.check_output(args, stdin=p1.stdout)
+p1.wait()
+```
+
+`multiprocessing`
+
+- `multiprocessing.Process(target=func, args=(...))`
 
 ## GUI
 wxpython
@@ -705,7 +767,7 @@ response:
 
 - `status`
 - `getheader(s)`
-- 
+- `read()`
 
 tidy
 
@@ -781,3 +843,6 @@ setup(name='Hello',
 - logging
 
 
+## Projects
+- [x] convert text file to a data structure
+- [x] write a crawler/spider to scrape all the decsendant links of a website using recursion or message queue.

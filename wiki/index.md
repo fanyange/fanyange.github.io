@@ -62,10 +62,21 @@ web 开发，获得我想要的数据，反而是当务之急。多读书，让�
 ### 2016-05-22
 龙应台曾经给他儿子一句话：“孩子，我要求你读书用功，不是因为我要你跟别人比成绩，而是因为，我希望你将来会拥有选择的权利，选择有意义、有时间的工作，而不是被迫谋生。当你的工作在你心中有意义，你就有成就感。当你的工作给你时间，不剥夺你的生活，你就有尊严。成就感和尊严，给你快乐。 ”
 
+### 2016-07-31
+必须要运动啊！所谓「感觉身体被掏空」只是没有运动、缺氧的负反馈循环导致精神状态低于阈值罢了。
+
 ## Learning Path
 
+**1st period**
+
 - Python
-  - syntax / SQL / Vim
+  - [x] syntax
+  - std library
+    - logging
+    - configparser
+    - concurrency
+    - network
+  - SQL / Vim
   - (cookbook / core application)
   - Flask / ORM
   - TDD
@@ -76,11 +87,18 @@ web 开发，获得我想要的数据，反而是当务之急。多读书，让�
 - CSS
 - Design
 - iOS(Swift)
-- C
-- Golang
-
+- Git
 
 **2nd period**
+
+- C
+- algorithms
+- Linux
+- network
+- system
+
+
+**3rd period**
 
 - Photography
 - Drawing

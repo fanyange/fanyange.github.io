@@ -58,7 +58,7 @@ title: Flask
   - `striptags`
 - control flow
 - macro: just like a function
-  - and you can import macros from other files: `{% import 'macro.html' as macros %}`
+  - and you can import macros from other files: `\{\% import 'macro.html' as macros \%\}`
 - `include` code fragments
 - `extends` and `super()`
 - `url_for('func', _external=True, **queries)`

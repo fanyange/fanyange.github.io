@@ -11,7 +11,7 @@ exclude: ["CNAME", "public", "README.md"]
 
 permalink: /blog/:categories/:title/
 
-url: http://blog.fanyange.com
+# url: http://blog.fanyange.com
 
 navigation:
   - blog

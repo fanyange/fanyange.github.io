@@ -26,8 +26,8 @@ elsewhere:
   - name: Motto
     link: /motto
 
-# disqus: yizhi
-duoshuo: yizhi-fanyange
+disqus: fanyange
+# duoshuo: yizhi-fanyange
 
 
 author: Tom Mao

@@ -1,6 +1,13 @@
 ---
 title: SQL
 ---
+
+## SQLite3
+`.mode column`
+
+`.headers on`
+
+
 - DDL(Data Definition Language)
 - DML(Data Manipulation Language)
 - DCL(Data Control Language)

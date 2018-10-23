@@ -846,3 +846,4 @@ setup(name='Hello',
 ## Projects
 - [x] convert text file to a data structure
 - [x] write a crawler/spider to scrape all the decsendant links of a website using recursion or message queue.
+- [ ] save note files in Dropbox and automatically updates the Jekyll posts and wikis

@@ -9,6 +9,7 @@ title: My knowledge base
 - [[Python]]
 - [[JavaScript]]
 - [[SQL]]
+- [[Network]]
 
 ### Web Development
 
